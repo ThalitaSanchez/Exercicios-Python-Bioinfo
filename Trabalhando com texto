@@ -1,0 +1,39 @@
+def parrafo(numerodeparrafo):
+    #primero cargamos el fichero
+    fichero = open('quijote.txt', "r", encoding="utf-8")
+    #lo leemos
+    texto = fichero.read()
+    #y seleccionamos el párrafo indicado en el parámetro
+    parrafos = texto.split('\n')
+    while '' in parrafos:
+        parrafos.remove('')
+    cuenta=0
+    for parrafo in fichero:
+        cuenta=cuenta+1
+    parrafoseleccionado=parrafos[numerodeparrafo]
+    cadena=parrafoseleccionado
+    cadenacodificada=""
+    desplazamiento=7
+    for letra in cadena:
+        cadenacodificada=cadenacodificada+chr(ord(letra)+desplazamiento)
+    cadenadecodificada=''
+    for letra in cadenacodificada:
+        cadenadecodificada=cadenadecodificada+chr(ord(letra)-desplazamiento)
+ 
+    print(cadena)
+    print(cadenacodificada)
+    print(cadenadecodificada)
+ 
+    for letra in cadenacodificada:
+        print(ord(letra),end=" ")
+ 
+    for letra in cadenacodificada[351:352]:
+        print(f'\n\n\nEl número de código del carácter encriptado que se encuentra en la posición indicada: {ord(letra)}')
+ 
+ 
+ 
+    #acordaos de cerrar el fichero si no lo habéis abierto con un with
+    fichero.close()
+    return(parrafoseleccionado)
+ 
+parrafo(8)
