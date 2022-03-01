@@ -1,32 +1,26 @@
-#1
-linguagem="python"
-print (linguagem)
+#.........Exercício 1.............
+sequencia= 'VRSSSRTPSDKPVAHVVANPQAEGQLQWLNRRANALLANGVELRDNQLVVPSEGLYLIYSQVLFKGQGCPSTHVLLTHTISRIAVSYQTKVNLLSAIKSPCQRETPEGAEAKPWYEPIYLGGVFQLEKGDRLSAEINRPDYLLFAESGQVYFGIIAL'
 
-#2
-a=1500
-b=335
-print(a+b)
-print(a*b)
-print(a-b)
+#a)  Retorne o tamanho da sequência: 
+resultadoa=len(sequencia)
+print('O tamanho da sequencia é de:',resultadoa)
 
-#3
-a="Marrie"
-b=" Currie"
-c="!!!"
-print(a+b+c)
+#b) Realize a contagem da ocorrência de um sequência de leucinas (LL): 
+resultadob= sequencia.count('LL')
+print('A ocorrencia de leucinas na sequencia é de:',resultadob)
 
-#4
-print(3+3==5)
+#c) Encontre na sequência as posições ocupadas por duas glicinas (GG) e duas argininas (RR)
+resultadoc=sequencia.find('GG')
+resultadoc1=sequencia.find('RR')
+print('A posição ocupada por GG é:',resultadoc,'e RR é:',resultadoc1)
 
-#5
-print(5+9==13)
+#d) Retorne os 100 primeiros aminoácidos da sequência. 
+print('Os 100 primeiros aminoácidos da sequencia são:',sequencia[:100])
 
-#6
-pi=3.1415  
-print(pi)
+#e) Substitua o trecho da sequência com a ocorrência de 3 serinas e 1 arginina (SSSR) por alaninas. 
+print('A nova sequencia substituida é:',sequencia.replace('SSSR', 'AAAA'))
 
-#7
-pi=3.1415 
-    print(pi)
-
+#f) Quebre a sequência no local onde a substituição foi realizada. 
+novasequencia=sequencia.replace('SSSR', 'AAAA')
+print('sequencia quebrada na substituição:', novasequencia.split('AAAA'))
 
