@@ -1,0 +1,11 @@
+typeTres=3
+typeTresConSeis=3.6
+typeHola="hola mundo"
+
+type(typeTres)
+type(typeTresConSeis)
+type(typeHola)
+
+print("O tipo da variavel typeTres é:", type(typeTres)) 
+print("O tipo da variavel typeTresConSeis é:", type(typeTresConSeis)) 
+print("O tipo da variavel typeHola é:", type(typeHola)) 
