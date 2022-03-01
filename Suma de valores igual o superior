@@ -1,0 +1,18 @@
+Implementar un código de Python que realice la operación detallada más abajo sobre la lista entregada hasta encontrar un valor igual o superior al valor reseñado sin incluirlo 
+Operación: Suma de valores en posiciones impares empezando por 1 (por ejemplo con la lista [1,2,4,6,92,56] y el valor límite 90 sumaría 1+4).
+Lista: [ 53, 58, 6, 13, 31, 65, 29, 65, 83, 66, 39, 53, 53, 51, 37, 71, 7, 88, 83, 16, 34, 21, 79, 37, 74, 30, 69, 58, 78, 60, 62, 49, 14, 87, 21, 51, 65, 89, 28, 18, 18, 87, 20, 38, 72, 40, 83, 5, 22, 66, 35, 88, 58, 9, 76, 6, 44, 84, 58, 15, 64, 51, 35, 86, 53, 2, 23, 58, 16, 40, 41, 61, 32, 10, 44, 27, 71, 2, 47, 4, 4, 65, 62, 57, 33, 9, 54, 89, 18, 81, 59, 13, 51, 29, 37, 4, 27, 52, 57, 75, 19, 6, 61, 48, 6, 79, 87, 20, 20, 50, 46, 8, 86, 17, 37, 64, 69, 16, 56, 60, 70, 66, 26, 46, 3, 40, 42, 42, 83, 49, 64, 70, 77, 5, 31, 88, 62, 66, 68, 59, 78, 98, 86, 83, 87, 98, 89, 92, 100, 95]
+-Valor límite: 90
+-El valor de la suma es:
+
+i=0
+valor_limite=91
+resultado=0
+for elemento in lista:
+    if i%2==0:
+        if elemento<valor_limite:
+            resultado=resultado+elemento
+        else:
+            print(f'El número {elemento} no se suma al ser mayor o igual que {valor_limite}')
+            break
+    i=i+1
+print(f'La suma obtenida es: {resultado}')
