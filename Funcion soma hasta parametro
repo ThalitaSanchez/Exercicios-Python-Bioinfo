@@ -1,0 +1,13 @@
+import math
+lista =[421, 551, 596, 540, 675, 785, 742] #dada en el planteo
+ 
+def sucesion(numero):
+    return sum(range(numero+1))
+ 
+def resultado(lista):
+    suma = 0
+    for x in lista:
+        suma+=sucesion(x)
+    return suma * math.log(387420489,9)
+ 
+print(resultado(lista))
